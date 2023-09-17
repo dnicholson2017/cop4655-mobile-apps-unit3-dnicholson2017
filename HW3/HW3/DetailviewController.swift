@@ -45,16 +45,16 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Load the image located at the `artworkUrl100` URL and set it on the image view.
-        Nuke.loadImage(with: track.artworkUrl100, into: movieImageView)
+        //Nuke.loadImage(with: track.artworkUrl100, into: movieImageView)
 
         // Set labels with the associated track values.
-        movieNameLabel.text = track.movieName
-        descriptionContentLabel.text = track.description
-        popularityContentLabel.text = track.popularity
-        averageContentLabel.text = track.averageVote
+        movieNameLabel.text = track.original_title
+        descriptionContentLabel.text = track.overview
+        popularityContentLabel.text = String(track.popularity)
+        averageContentLabel.text = String(track.vote_average)
 
         // Use helper method to convert milliseconds into `mm:ss` string format
-        votesContentLabel.text = track.votes
+        votesContentLabel.text = String(track.vote_count)
 
     }
 
