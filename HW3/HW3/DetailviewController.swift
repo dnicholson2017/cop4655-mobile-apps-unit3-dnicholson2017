@@ -45,7 +45,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Load the image located at the `artworkUrl100` URL and set it on the image view.
-        Nuke.loadImage(with: track.poster_path, into: movieImageView)
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w440_and_h660_face/" +
+                           track.poster_path.absoluteString)
+        // Load image async via Nuke library image loading helper method
+        Nuke.loadImage(with: imageUrl!, into: movieImageView)
 
         // Set labels with the associated track values.
         movieNameLabel.text = track.original_title

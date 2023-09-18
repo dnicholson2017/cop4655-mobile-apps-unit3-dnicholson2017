@@ -258,10 +258,6 @@
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="zgN-yq-rzz" firstAttribute="leading" secondItem="BJK-6j-mJb" secondAttribute="trailing" constant="16" id="JGo-YL-4lp"/>
-                                                                <constraint firstAttribute="bottom" secondItem="BJK-6j-mJb" secondAttribute="bottom" constant="16" id="wF0-8U-kRf"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>

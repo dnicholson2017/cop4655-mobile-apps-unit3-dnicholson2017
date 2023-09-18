@@ -22,10 +22,14 @@ class PosterViewController: UIViewController, UICollectionViewDataSource {
         let album = albums[indexPath.item]
 
         // Get the artwork image url
-        let imageUrl = album.poster_path
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w440_and_h660_face/" +
+                           album.poster_path.absoluteString)
 
         // Set the image on the image view of the cell
-        Nuke.loadImage(with: imageUrl, into: cell.posterImageView)
+        Nuke.loadImage(with: imageUrl!, into: cell.posterImageView)
+        
+        // wierd error message when ! removed from         Nuke.loadImage(with: imageUrl!, into: cell.posterImageView)
+
 
         return cell
     }

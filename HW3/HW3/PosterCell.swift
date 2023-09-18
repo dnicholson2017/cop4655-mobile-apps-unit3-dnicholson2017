@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Nuke
+
 
 class PosterCell: UICollectionViewCell {
     
     @IBOutlet weak var posterImageView: UIImageView!
     
+
+    
 }
+
