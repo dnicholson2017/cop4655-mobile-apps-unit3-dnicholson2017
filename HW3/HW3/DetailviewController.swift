@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Load the image located at the `artworkUrl100` URL and set it on the image view.
-        //Nuke.loadImage(with: track.artworkUrl100, into: movieImageView)
+        Nuke.loadImage(with: track.poster_path, into: movieImageView)
 
         // Set labels with the associated track values.
         movieNameLabel.text = track.original_title

@@ -33,12 +33,13 @@ class MovieViewController: UIViewController, UITableViewDataSource {
     // TODO: Pt 1 - Add a tracks property
     var tracks: [Track] = []
     
+    // TODO: Pt 1 - Add table view outlet
+
     @IBOutlet weak var tableView: UITableView!
     
 
 
 
-    // TODO: Pt 1 - Add table view outlet
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +83,17 @@ class MovieViewController: UIViewController, UITableViewDataSource {
 
                 // Access the array of tracks from the `results` property
                 let tracks = response.results
-                print("✅ \(tracks)")
+                
+                //print("✅ \(tracks)")
+                // Execute UI updates on the main thread when calling from a background callback
+                DispatchQueue.main.async {
+
+                    // Set the view controller's tracks property as this is the one the table view references
+                    self?.tracks = tracks
+
+                    // Make the table view reload now that we have new data
+                    self?.tableView.reloadData()
+                }
             }
             catch {
                 print(error)

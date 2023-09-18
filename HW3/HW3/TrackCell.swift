@@ -34,9 +34,10 @@ class TrackCell: UITableViewCell {
     func configure(with track: Track) {
         movieNameLabel.text = track.original_title
         movieDescriptionLabel.text = track.overview
-
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/" +
+                           track.poster_path.absoluteString)
         // Load image async via Nuke library image loading helper method
-        //Nuke.loadImage(with: track.artworkUrl100, into: movieImageView)
+        Nuke.loadImage(with: imageUrl!, into: movieImageView)
     }
 
 
