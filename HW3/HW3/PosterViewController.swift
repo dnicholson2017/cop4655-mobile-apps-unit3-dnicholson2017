@@ -22,7 +22,7 @@ class PosterViewController: UIViewController, UICollectionViewDataSource {
         let album = albums[indexPath.item]
 
         // Get the artwork image url
-        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w440_and_h660_face/" +
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" +
                            album.poster_path.absoluteString)
 
         // Set the image on the image view of the cell
@@ -120,5 +120,6 @@ class PosterViewController: UIViewController, UICollectionViewDataSource {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
