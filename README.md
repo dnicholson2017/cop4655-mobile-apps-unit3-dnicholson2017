@@ -1,4 +1,4 @@
-# Project 3 - *lixter Clone pt 2*
+# Project 3 - Flixter Clone pt 2*
 
 Submitted by: **D'Andre Nicholson**
 
